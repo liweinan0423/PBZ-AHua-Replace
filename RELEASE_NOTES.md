@@ -1,38 +1,50 @@
-# v1.0.0 — 新娘阿花独立替换 Mod
+# v1.0.1 — 简化安装流程
 
-首个独立版本：把主角「魂」的外观替换为 Boss「新娘阿花」，保留原主角的
-操作、动画、碰撞、相机与武器系统。
+## 变化
+
+- 安装改为两步：**把 `AHuaReplace` 解压到游戏根目录 → 双击 `Install.bat`**。
+- `install.ps1` 会自动向上查找游戏根目录（`platform\steam\PBZ.exe` 所在层）。
+- 新增 `Install.bat` / `Uninstall.bat`：Windows 默认双击 `.ps1` 会用记事本
+  打开，所以用 `.bat` 作为双击入口。
+- 一键安装脚本改为下载最新 Release 的 `AHuaReplace.zip`。
 
 ## 下载
 
-- **AHuaReplace_20261105.zip**
-  <https://github.com/liweinan0423/PBZ-AHua-Replace/releases/download/v1.0.0/AHuaReplace_20261105.zip>
+**AHuaReplace.zip**
+<https://github.com/liweinan0423/PBZ-AHua-Replace/releases/latest/download/AHuaReplace.zip>
 
-## 支持版本
+## 安装（两步）
 
-- Steam build **26367565**（2026-11-04 更新）
-- `PBZ.exe` SHA-256：
-  `4415933ce33476f14c837abb61a1b60af8b78cd81783896501913a7aac69e423`
+1. **完全退出游戏**（包括后台进程 / 托盘）。
+2. 把整个 **AHuaReplace 文件夹**解压到游戏根目录，例如：
 
-游戏更新后 DLL 会输出 `UNSUPPORTED_BUILD` 并停止工作，不会修改游戏内存。
-
-## 安装
-
-1. 完全退出游戏。
-2. 解压 zip。
-3. 运行：
-
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File install.ps1
+   ```
+   C:\Program Files (x86)\Steam\steamapps\common\PBZ\
    ```
 
-   非默认 Steam 目录：
+   解压后应同时看到：
 
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File install.ps1 -GameDir "D:\Steam\steamapps\common\PBZ"
+   ```
+   ...\PBZ\AHuaReplace\
+   ...\PBZ\platform\
    ```
 
-4. 启动游戏，加载任意存档；进入场景后约 1–3 秒自动应用。
+3. 双击：
+
+   ```
+   AHuaReplace\Install.bat
+   ```
+
+4. 启动游戏，加载任意存档；进入场景后约 1–3 秒自动应用「新娘阿花」。
+
+> Windows 默认双击 `.ps1` 会用记事本打开；请双击 `Install.bat`，
+> 它等价于运行 `install.ps1`。
+
+非默认 Steam 目录也可以直接指定：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File install.ps1 -GameDir "D:\Steam\steamapps\common\PBZ"
+```
 
 ## 验证
 
@@ -53,24 +65,17 @@ AHUA_ACTIVE
 
 ## 卸载
 
-```powershell
-powershell -ExecutionPolicy Bypass -File uninstall.ps1
-```
+完全退出游戏，双击 `AHuaReplace\Uninstall.bat`。
 
 会删除 `version.dll` 并恢复安装前备份的 `version.dll.backup_<时间戳>`。
 
-## 说明
+## 支持版本
 
-- 不修改游戏 pak，不写存档。
-- 安装时自动备份原有 `version.dll`。
-- 只替换本地显示层；不影响操作、判定、动画蓝图。
-- 与其它 `version.dll` 代理 Mod 不能同时使用。
+- Steam build **26367565**（2026-11-04 更新）
+- `PBZ.exe` SHA-256：
+  `4415933ce33476f14c837abb61a1b60af8b78cd81783896501913a7aac69e423`
 
-## 已知限制
-
-- 按 `PBZ.exe` 版本锁定。
-- 手部绑定姿态与 Hun 约有 38–56° 差异，极端姿势腕部可能轻微变形。
-- 攻击、技能、过场、传送后的表现建议继续实测。
+游戏更新后 DLL 会输出 `UNSUPPORTED_BUILD` 并停止工作，不会修改游戏内存。
 
 ## 来源
 
@@ -83,5 +88,5 @@ powershell -ExecutionPolicy Bypass -File uninstall.ps1
 
 ```text
 706b0a5c6f2d6b49018aa1b618d560ec007aab31032bfcd15e12a9b6c8647852  version.dll
-9ceec69dbf67744ac244947832cbd931706e45cf02afa01488fc222d8873e902  AHuaReplace_20261105.zip
+d723c6ba473cbaa589ef9ca727b6685ec9d9fad281d42eeca76a51b8040fd66e  AHuaReplace.zip
 ```

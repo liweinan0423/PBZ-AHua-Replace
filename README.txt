@@ -12,13 +12,20 @@ PBZ.exe SHA-256:
 
 游戏更新后 DLL 会拒绝工作（不会写游戏内存），需要等新版本。
 
-安装
-----
+安装（两步）
+------------
 1. 完全退出游戏。
-2. 右键 install.ps1 -> 使用 PowerShell 运行，或在 PowerShell 中执行：
-   powershell -ExecutionPolicy Bypass -File install.ps1
-3. 启动游戏，加载任意存档。
-4. 进入场景后约 1-3 秒自动应用「新娘阿花」。
+2. 把整个 AHuaReplace 文件夹解压到游戏根目录，例如：
+   C:\Program Files (x86)\Steam\steamapps\common\PBZ\
+   解压后应同时看到：
+     ...\PBZ\AHuaReplace\
+     ...\PBZ\platform\
+3. 双击 AHuaReplace\Install.bat。
+4. 启动游戏，加载任意存档；进入场景后约 1-3 秒自动应用。
+
+说明：
+Windows 默认双击 .ps1 会用记事本打开，所以请双击 Install.bat。
+Install.bat 等价于运行 install.ps1，并会自动查找游戏目录。
 
 日志
 ----
@@ -36,10 +43,8 @@ AHua_Body 的 161 根骨骼与主角实际身体 Hun_Body_Simple（264 骨）100
 卸载
 ----
 1. 完全退出游戏。
-2. 运行 uninstall.ps1。
+2. 双击 Uninstall.bat。
    它会删除 version.dll、恢复安装前备份的 version.dll，并清理日志。
-3. 如果之前装过其他 version.dll 代理，安装时已自动备份为
-   version.dll.backup_<时间戳>。
 
 已知限制
 --------
@@ -51,6 +56,9 @@ AHua_Body 的 161 根骨骼与主角实际身体 Hun_Body_Simple（264 骨）100
 文件
 ----
 version.dll      独立运行时替换组件
-install.ps1      安装
-uninstall.ps1    卸载
+Install.bat      双击安装
+Uninstall.bat    双击卸载
+install.ps1      安装脚本（由 Install.bat 调用）
+uninstall.ps1    卸载脚本（由 Uninstall.bat 调用）
 README.txt       本说明
+preview.png      预览图

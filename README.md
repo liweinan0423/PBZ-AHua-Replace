@@ -43,8 +43,8 @@
 **推荐：从 Releases 下载**
 
 - 最新版页面：<https://github.com/liweinan0423/PBZ-AHua-Replace/releases/latest>
-- 直接下载 v1.0.0：
-  <https://github.com/liweinan0423/PBZ-AHua-Replace/releases/download/v1.0.0/AHuaReplace_20261105.zip>
+- 直接下载最新版：
+  <https://github.com/liweinan0423/PBZ-AHua-Replace/releases/latest/download/AHuaReplace.zip>
 
 也可以直接克隆本仓库，`version.dll` 就在仓库根目录：
 
@@ -56,9 +56,11 @@ git clone https://github.com/liweinan0423/PBZ-AHua-Replace.git
 
 ```
 AHuaReplace/
+  Install.bat      双击安装
+  Uninstall.bat    双击卸载
   version.dll      独立替换组件（3.63 MB）
-  install.ps1      安装
-  uninstall.ps1    卸载
+  install.ps1      安装脚本（由 Install.bat 调用）
+  uninstall.ps1    卸载脚本（由 Uninstall.bat 调用）
   README.txt       简要说明
   preview.png      预览图
 ```
@@ -76,28 +78,37 @@ powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.c
 它会下载最新 Release、解压并调用安装脚本。如果不希望远程执行脚本，
 请使用下面的手动步骤。
 
-### 手动步骤
+### 手动步骤（普通玩家推荐）
 
 1. **完全退出游戏**（包括后台进程 / 托盘）。
-2. 下载并解压 `AHuaReplace_20261105.zip`。
-3. 在解压目录中运行安装脚本：
+2. 下载 `AHuaReplace.zip`。
+3. 把整个 **AHuaReplace 文件夹** 解压到游戏根目录，例如：
 
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File install.ps1
+   ```
+   C:\Program Files (x86)\Steam\steamapps\common\PBZ\
    ```
 
-   也可以右键 `install.ps1` → **使用 PowerShell 运行**。
+   解压后应同时看到：
 
-4. 启动游戏，**加载任意存档**。
-5. 进入可操控主角的场景后，约 **1–3 秒**自动应用「新娘阿花」。
+   ```
+   ...\PBZ\AHuaReplace\
+   ...\PBZ\platform\
+   ```
 
-安装脚本会自动找到 Steam 默认目录：
+4. 双击：
 
-```
-C:\Program Files (x86)\Steam\steamapps\common\PBZ
-```
+   ```
+   AHuaReplace\Install.bat
+   ```
 
-如果游戏不在默认位置，可以指定：
+5. 启动游戏，**加载任意存档**；进入场景后约 **1–3 秒**自动应用「新娘阿花」。
+
+> **为什么不是双击 install.ps1？**
+> Windows 默认双击 `.ps1` 会用记事本打开，而不是执行脚本。
+> 所以请双击 `Install.bat`，它等价于运行 `install.ps1`，并会自动向上查找
+> 游戏根目录（`platform\steam\PBZ.exe` 所在的那一层）。
+
+如果游戏不在默认位置，也可以直接指定：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1 -GameDir "D:\Steam\steamapps\common\PBZ"
