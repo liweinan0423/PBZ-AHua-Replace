@@ -67,7 +67,16 @@ AHuaReplace/
 
 ## 安装
 
-### 步骤
+### 一键安装（PowerShell）
+
+```powershell
+powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/liweinan0423/PBZ-AHua-Replace/main/install-from-github.ps1 | iex"
+```
+
+它会下载最新 Release、解压并调用安装脚本。如果不希望远程执行脚本，
+请使用下面的手动步骤。
+
+### 手动步骤
 
 1. **完全退出游戏**（包括后台进程 / 托盘）。
 2. 下载并解压 `AHuaReplace_20261105.zip`。
