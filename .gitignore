@@ -1,0 +1,6 @@
+source/build/
+source/build_debug/
+source/vendor/
+.vs/
+*.user
+*.log
