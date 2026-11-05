@@ -1,0 +1,11 @@
+1.0.1 (2026-11-05)
+- 简化安装流程：把 AHuaReplace 文件夹解压到游戏根目录，双击 Install.bat。
+- install.ps1 自动向上查找游戏根目录（platform\steam\PBZ.exe）。
+- 新增 Install.bat / Uninstall.bat，避免 Windows 双击 .ps1 只打开记事本。
+- 一键安装脚本改为下载最新 Release 的 AHuaReplace.zip。
+
+1.0.0 (2026-11-05)
+- 首个独立版本：主角「魂」外观替换为 Boss「新娘阿花」。
+- AHua_Body + 3 个 Chaos 布料部件。
+- 161 根共享骨骼、16 条原生武器挂点、相机/碰撞处理。
+- 不修改游戏 pak，不写入存档。

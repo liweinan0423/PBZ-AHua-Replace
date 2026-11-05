@@ -1,0 +1,38 @@
+Credits / 来源
+==============
+
+Mod author / 本 Mod 作者
+- liweinan0423
+
+Retarget subsystem / 重定向子系统
+- Jersyi/cringe-blade-zero
+- https://github.com/Jersyi/cringe-blade-zero
+- Pinned commit: d77f0d9a1b316c4accb5a6d2e8790909b0673029
+- The upstream repository currently declares no license (no license file,
+  no SPDX identifier). This mod does not claim any additional license for
+  the derived version.dll binary. The binary is provided as-is for personal
+  use. Do not redistribute it without permission from the upstream author.
+
+Game assets / 游戏素材
+- Phantom Blade Zero / 影之刃零
+- Characters, meshes, textures, trademarks: S-GAME / official owners.
+- This is an unofficial fan-made mod, not affiliated with or endorsed by
+  S-GAME.
+
+Third-party / 第三方
+- version.dll is a proxy that forwards all original exports to
+  C:\Windows\System32\version.dll. It does not replace the system file.
+
+Nexus permissions (suggested)
+-----------------------------
+- Other users may use this mod for personal use: YES
+- Other users may modify this mod for personal use: YES
+- Other users may reupload this mod: NO
+- Other users may use assets from this mod: NO (upstream retarget code has no
+  license; game assets belong to S-GAME)
+- Other users may use this mod in collections: YES (link back to this page)
+- Commercial use: NO
+
+Contact
+-------
+GitHub: https://github.com/liweinan0423/PBZ-AHua-Replace

@@ -1,0 +1,83 @@
+Nexus Mods 上传字段（可直接复制）
+==================================
+
+Mod name
+--------
+新娘阿花 独立替换 Mod (AHua Standalone Replacement)
+
+Summary
+-------
+Replace protagonist Hun's appearance with boss AHua. Standalone version.dll; extract to game root and run Install.bat.
+
+Category
+--------
+Models and Textures / Appearance（以页面可选分类为准）
+
+Tags
+----
+AHua, Bride, Player, Appearance, Model, version.dll
+
+Adult content
+-------------
+No
+
+Game
+----
+Phantom Blade Zero
+
+Description
+-----------
+粘贴 description.bbcode 的全部内容。
+
+File to upload
+--------------
+AHuaReplace_1.0.1.zip（本目录，约 0.98 MB）
+
+File name
+---------
+AHuaReplace 1.0.1
+
+File version
+------------
+1.0.1
+
+File category
+-------------
+Main files
+
+File description
+----------------
+Standalone AHua replacement. Extract to game root and run Install.bat.
+
+Requirements
+------------
+Phantom Blade Zero
+Steam build 26367565
+
+Changelog
+---------
+粘贴 changelog.txt 的全部内容。
+
+Credits
+-------
+Jersyi/cringe-blade-zero (retarget subsystem, commit d77f0d9a1b316c4accb5a6d2e8790909b0673029);
+liweinan0423 (trimmed build, auto-apply, packaging).
+
+Permissions (suggested)
+-----------------------
+- Other users may use this mod for personal use: YES
+- Other users may modify this mod for personal use: YES
+- Other users may reupload this mod: NO
+- Other users may use assets from this mod: NO
+- Other users may use this mod in collections: YES (link back)
+- Commercial use: NO
+
+Images
+------
+preview.png（主图）
+screenshot_2.png（第二张）
+
+SHA-256
+-------
+706b0a5c6f2d6b49018aa1b618d560ec007aab31032bfcd15e12a9b6c8647852  version.dll
+e8bb71fcb7b8897c43bd46882abf8939f236e5ddcf63ef81e1038f15b4b87e9e  AHuaReplace_1.0.1.zip
