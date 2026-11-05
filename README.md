@@ -46,6 +46,14 @@
 - 直接下载最新版：
   <https://github.com/liweinan0423/PBZ-AHua-Replace/releases/latest/download/AHuaReplace.zip>
 
+### Nexus Mods 上传材料
+
+Nexus 页面尚未发布（Nexus 没有公开上传 API，需要在网页端用作者账号上传）。
+上传字段、BBCode 描述和权限说明见 [`NEXUS.md`](NEXUS.md)。
+
+Nexus 专用精简包（0.98 MB，适合网页上传）：
+[`nexus/AHuaReplace_1.0.1.zip`](nexus/AHuaReplace_1.0.1.zip)
+
 也可以直接克隆本仓库，`version.dll` 就在仓库根目录：
 
 ```bash
